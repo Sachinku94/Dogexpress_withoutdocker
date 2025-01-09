@@ -9,7 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManage
 @pytest.fixture(scope="class")
 def setup(request):
     # Read base URL from config
-    CHROMEDRIVER_VERSION = "114.0.5735.90"
+    CHROMEDRIVER_VERSION = "131.0.6778.205"
     driver = webdriver.Chrome(
         ChromeDriverManager(version=CHROMEDRIVER_VERSION).install()
     )

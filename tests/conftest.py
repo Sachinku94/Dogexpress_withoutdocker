@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from Config.config_reader import read_config
-from webdriver_manager.chrome import ChromeDriverManage
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 @pytest.fixture(scope="class")

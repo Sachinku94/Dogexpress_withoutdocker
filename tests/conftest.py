@@ -13,7 +13,8 @@ def setup(request):
     # driver = webdriver.Chrome(
     #     ChromeDriverManager(driver_version=CHROMEDRIVER_VERSION).install()
     # )
-    driver=webdriver.Chrome(ChromeDriverManager(driver_version=CHROMEDRIVER_VERSION))
+    driver=webdriver.Chrome()
+    
     base_url = read_config("URL", "base_url")
     
 

@@ -49,8 +49,7 @@ def setup(request):
 
     # Initialize the Chrome driver with specified options and version
     CHROMEDRIVER_VERSION = "131.0.6778.205"
-    driver = webdriver.Chrome(
-        executable_path=ChromeDriverManager(driver_version=CHROMEDRIVER_VERSION).install(),
+    driver = webdriver.Chrome(ChromeDriverManager(driver_version=CHROMEDRIVER_VERSION).install(),
         options=chrome_options
     )
 

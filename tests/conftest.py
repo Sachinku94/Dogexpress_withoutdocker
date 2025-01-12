@@ -11,7 +11,7 @@ def setup(request):
     # Read base URL from config
     CHROMEDRIVER_VERSION = "131.0.6778.205"
     driver = webdriver.Chrome(
-        ChromeDriverManager(version=CHROMEDRIVER_VERSION).install()
+        ChromeDriverManager(driver_version=CHROMEDRIVER_VERSION).install()
     )
     base_url = read_config("URL", "base_url")
     driver = webdriver.Chrome()

@@ -14,7 +14,7 @@ def setup(request):
         ChromeDriverManager(driver_version=CHROMEDRIVER_VERSION).install()
     )
     base_url = read_config("URL", "base_url")
-    driver = webdriver.Chrome()
+    
 
     driver.get(base_url)
 

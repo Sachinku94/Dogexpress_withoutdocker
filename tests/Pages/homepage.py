@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import requests
 
 
 class HomePage(BaseClass):
@@ -54,3 +55,16 @@ class HomePage(BaseClass):
         #             return style.getPropertyValue('color');  // Replace 'content' with desired property
         #         '''
         # pseudo_content = self.driver.execute_script(script, self.view_more)
+
+    def broken_img(self):
+        images = []
+        log = self.getLogger()
+        imag = "img"
+        all_images = self.driver.find_elements(By.TAG_NAME, imag)
+        for image in all_images:
+            sing_img = image.get_attribute("src")
+            images.append(sing_img)
+        for im in images:
+            response = requests.get(im)
+
+            assert response.status_code != 404
